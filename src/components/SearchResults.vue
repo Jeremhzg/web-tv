@@ -2,25 +2,9 @@
   <div class="container mb-3">
     <div class="d-flex mb-3">
       <div class="mr-auto">
+        <h3>Résultat pour |  {{ reformattedSearchString }}</h3>
       </div>
-      <div class="btn-group ml-auto" role="group">
-        <button
-          @click="changeDisplayMode('grid')"
-          type="button"
-          class="btn btn-outline-secondary"
-          v-bind:class="{ active: displayMode === 'grid' }"
-        >
-          <i class="fas fa-th"></i>
-        </button>
-        <button
-          @click="changeDisplayMode('list')"
-          type="button"
-          class="btn btn-outline-secondary"
-          v-bind:class="{ active: displayMode === 'list' }"
-        >
-          <i class="fas fa-list"></i>
-        </button>
-      </div>
+
     </div>
 
     <div class="card-columns" v-if="displayMode === 'grid'">
