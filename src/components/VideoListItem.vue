@@ -2,7 +2,7 @@
   <div>
     <div class="card-body">
       <h5 class="card-title">
-        <video>
+        <video width="320" height="240" controls>
         <source src="'https://www.youtube.com/watch?v=' + video.id.videoId">{{ video.snippet.title }}</video>
       </h5>
       <h6
