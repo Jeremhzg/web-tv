@@ -3,10 +3,10 @@
     <nav>
       <ul class="pagination justify-content-end">
         <li class="page-item" v-bind:class="{ disabled: prevPageToken === undefined }">
-          <a @click="prevPage" class="page-link" href="#">Previous</a>
+          <a @click="prevPage" class="page-link" href="#">Précédent</a>
         </li>
         <li class="page-item" v-bind:class="{ disabled: nextPageToken === undefined }">
-          <a @click="nextPage" class="page-link" href="#">Next</a>
+          <a @click="nextPage" class="page-link" href="#">Suivant</a>
         </li>
       </ul>
     </nav>

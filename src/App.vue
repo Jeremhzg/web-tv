@@ -45,6 +45,7 @@ export default {
         order: 'viewCount',
         maxResults: 12,
         q: '',
+        channelId:'UCOipQ939Yy0Ja5GVI4l-lvA',
         key: 'AIzaSyDjWIVyR4ksdPEOJIw1sdV-WJWKUBTR-Ko' ,
         prevPageToken: '',
         nextPageToken: ''
@@ -56,8 +57,8 @@ methods: {
     search(searchParams) {
       this.reformattedSearchString = searchParams.join(' ');
       this.api.q = searchParams.join('+');
-      const { baseUrl, part, type, order, maxResults, q, key } = this.api;
-      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}`;
+      const { baseUrl, part, type, order, maxResults, q, key, channelId} = this.api;
+      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&channelId=${channelId}`;
       this.getData(apiUrl);
     },
 
