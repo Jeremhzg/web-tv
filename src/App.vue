@@ -21,12 +21,29 @@
 //   color: #2c3e50;
 // }
 
-// #nav {
-//   padding: 30px;
+    prevPage() {
+      const { baseUrl, part, type, order, maxResults, q, key, prevPageToken, channelId } = this.api;
+      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&pageToken=${prevPageToken}&channelId=${channelId}`;
+      this.getData(apiUrl);
+    },
 
-//   a {
-//     font-weight: bold;
-//     color: #091018;
+    nextPage() {
+      const { baseUrl, part, type, order, maxResults, q, key, nextPageToken, channelId } = this.api;
+      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&pageToken=${nextPageToken}&channelId=${channelId}`;
+      this.getData(apiUrl);
+    },
+    getData(apiUrl) {
+      axios
+        .get(apiUrl)
+        .then(res => {
+          this.videos = res.data.items;
+          this.api.prevPageToken = res.data.prevPageToken;
+          this.api.nextPageToken = res.data.nextPageToken;
+        })
+        .catch(error => console.log(error));
+    }
+  }
+};
 
 //     &.router-link-exact-active {
 //       color: #42b983;
