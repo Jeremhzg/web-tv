@@ -63,14 +63,14 @@ methods: {
     },
 
     prevPage() {
-      const { baseUrl, part, type, order, maxResults, q, key, prevPageToken } = this.api;
-      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&pageToken=${prevPageToken}`;
+      const { baseUrl, part, type, order, maxResults, q, key, prevPageToken, channelId } = this.api;
+      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&pageToken=${prevPageToken}&channelId=${channelId}`;
       this.getData(apiUrl);
     },
 
     nextPage() {
-      const { baseUrl, part, type, order, maxResults, q, key, nextPageToken } = this.api;
-      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&pageToken=${nextPageToken}`;
+      const { baseUrl, part, type, order, maxResults, q, key, nextPageToken, channelId } = this.api;
+      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&pageToken=${nextPageToken}&channelId=${channelId}`;
       this.getData(apiUrl);
     },
     getData(apiUrl) {
