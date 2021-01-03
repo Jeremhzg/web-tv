@@ -43,6 +43,7 @@ export default {
         type: 'video',
         order: 'viewCount',
         maxResults: 12,
+        channelId:'UCOipQ939Yy0Ja5GVI4l-lvA',
         q: '',
         key: 'AIzaSyDjWIVyR4ksdPEOJIw1sdV-WJWKUBTR-Ko' ,
         prevPageToken: '',
@@ -55,8 +56,8 @@ methods: {
     search(searchParams) {
       this.reformattedSearchString = searchParams.join(' ');
       this.api.q = searchParams.join('+');
-      const { baseUrl, part, type, order, maxResults, q, key } = this.api;
-      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}`;
+      const { baseUrl, part, type, order, maxResults, q, key, channelId } = this.api;
+      const apiUrl = `${baseUrl}part=${part}&type=${type}&order=${order}&q=${q}&maxResults=${maxResults}&key=${key}&channelId=${channelId}`;
       this.getData(apiUrl);
     },
 
@@ -80,7 +81,18 @@ methods: {
           this.api.nextPageToken = res.data.nextPageToken;
         })
         .catch(error => console.log(error));
+    },
+    playVideo() {
+      this.player.playVideo()
+    },
+     playing() {
+      console.log('On regarde la vidéo !')
+    },
+    computed: {
+    player() {
+      return this.$refs.youtube.player
     }
+  }
   }
 };
 
@@ -92,5 +104,8 @@ methods: {
 #app {
   background-color: white;
 
+}
+#movie_player > div.ytp-cued-thumbnail-overlay > div{
+  width: 200px;
 }
 </style>

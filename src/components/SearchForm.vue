@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1 style="text-align:center; margin-top:10px">Trouvez votre bonheur</h1>
     <form class="mb-5">
       <div class="input-group">
         <input
@@ -49,6 +50,7 @@ export default {
 input,
 button {
   box-shadow: none !important;
+  margin: 20px;
 }
 
 .form-control {
