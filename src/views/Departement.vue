@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+        <TheNavigation />
+        <Accueil />
   </div>
 </template>
 
@@ -30,3 +27,15 @@
   }
 }
 </style>
+<script>
+import Accueil from "../components/Accueil";
+import TheNavigation from "../components/layout/TheNavigation";
+
+export default {
+  name: "App",
+  components: {
+    Accueil,
+    TheNavigation,
+  }
+}
+</script>

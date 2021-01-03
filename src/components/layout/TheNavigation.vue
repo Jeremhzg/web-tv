@@ -1,16 +1,16 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#" class="logo">LOGO</b-navbar-brand>
+      <b-navbar-brand href="#" class="logo"><img src="src/images/logoUFC.png" alt="LogoUFC"></b-navbar-brand>
       
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Département</b-nav-item>
-          <b-nav-item href="#" >Thématique</b-nav-item>
-          <b-nav-item href="#" >Direct</b-nav-item>
+          <b-nav-item href="../views/Departement.vue">Département</b-nav-item>
+          <b-nav-item href="../views/Departement.vue" >Thématique</b-nav-item>
+          <b-nav-item href="../views/Departement.vue" >Direct</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -27,6 +27,7 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h1 style="text-align:center; margin-top:10px">Trouvez votre bonheur</h1>
     <form class="mb-5">
       <div class="input-group">
         <input
@@ -8,12 +7,10 @@
           @keydown.13.prevent="parseSearchString"
           type="text"
           class="form-control"
-          placeholder="Search ..."
+          placeholder="Rechercher ..."
         >
         <div class="input-group-append">
-          <button @click="parseSearchString" class="btn btn-outline-secondary" type="button">
-            <i class="fas fa-search"></i>
-          </button>
+            <button @click="parseSearchString" size="sm" class=" btn btn-outline-secondary" type="submit">Rechercher</button>
         </div>
       </div>
     </form>

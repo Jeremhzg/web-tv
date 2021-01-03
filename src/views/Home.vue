@@ -15,6 +15,7 @@
       v-on:prev-page="prevPage"
       v-on:next-page="nextPage"
     />
+    <TheFooter />
   </div>
 </template>
 <script>
@@ -23,6 +24,7 @@ import TheNavigation from "../components/layout/TheNavigation";
 import SearchForm from '../components/SearchForm';
 import SearchResults from '../components/SearchResults';
 import Pagination from '../components/Pagination';
+import TheFooter from '../components/layout/TheFooter';
 
 export default {
   name: "App",
@@ -32,6 +34,7 @@ export default {
     SearchForm,
     SearchResults,
     Pagination,
+    TheFooter,
   },
     data() {
     return {
